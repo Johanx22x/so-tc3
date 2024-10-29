@@ -1,0 +1,8 @@
+# Ejemplo de instrucciones para el sistema de archivos simple
+
+CREATE archivo1.txt 1000
+WRITE archivo1.txt 0 "Hola, mundo"
+READ archivo1.txt 0 11
+LIST
+DELETE archivo1.txt
+LIST
