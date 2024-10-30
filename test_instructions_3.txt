@@ -1,0 +1,28 @@
+# Prueba de límites con archivos grandes y múltiples eliminaciones
+
+CREATE bigfile1.txt 4096
+CREATE bigfile2.txt 4096
+CREATE bigfile3.txt 4096
+
+WRITE bigfile1.txt 0 "Este es el archivo grande número 1."
+WRITE bigfile2.txt 0 "Este es el archivo grande número 2."
+WRITE bigfile3.txt 0 "Este es el archivo grande número 3."
+
+READ bigfile1.txt 0 30
+READ bigfile2.txt 0 30
+READ bigfile3.txt 0 30
+
+LIST
+
+DELETE bigfile1.txt
+DELETE bigfile2.txt
+DELETE bigfile3.txt
+
+LIST
+
+# Crear nuevamente después de borrar grandes archivos
+CREATE newfile1.txt 512
+WRITE newfile1.txt 0 "Este es un archivo nuevo tras eliminar archivos grandes."
+READ newfile1.txt 0 45
+
+LIST

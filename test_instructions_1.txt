@@ -1,0 +1,24 @@
+# Prueba con múltiples archivos y operaciones variadas
+
+CREATE archivo1.txt 500
+CREATE archivo2.txt 2000
+CREATE archivo3.txt 1500
+
+WRITE archivo1.txt 0 "Primer archivo de prueba."
+WRITE archivo2.txt 100 "Segundo archivo de prueba en una posición distinta."
+WRITE archivo3.txt 0 "Este es el tercer archivo."
+
+READ archivo1.txt 0 25
+READ archivo2.txt 50 30
+READ archivo3.txt 0 18
+
+LIST
+
+DELETE archivo2.txt
+LIST
+
+CREATE archivo4.txt 300
+WRITE archivo4.txt 0 "Archivo nuevo después de eliminación."
+
+READ archivo4.txt 0 28
+LIST
