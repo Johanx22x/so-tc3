@@ -1,6 +1,6 @@
 # Crear un archivo pequeño y escribir más datos de su tamaño para verificar el manejo de límites.
 CREATE archivo_exceso.txt 200
-WRITE archivo_exceso.txt 0 "Este texto es muy muy largo y debería recortar al final porque excede los 200 bytes permitidos en el archivo."
+WRITE archivo_exceso.txt 0 "Este texto es muy largo y debería recortar al final porque excede los 200 bytes permitidos en el archivo. Está diseñado para probar el comportamiento del sistema cuando el contenido sobrepasa la capacidad definida, asegurando que no se escriba más de lo que el archivo puede contener y generando un mensaje de advertencia."
 READ archivo_exceso.txt 0 200
 
 # Crear un archivo de tamaño 100 bytes y leer desde un offset que esté fuera del límite.
