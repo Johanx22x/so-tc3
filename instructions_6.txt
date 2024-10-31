@@ -1,0 +1,19 @@
+# Crear archivos para ocupar todos los bloques disponibles y verificar que, al exceder, se obtenga un error.
+# El tamaño total es de 524288 bytes (512 KB), por lo que intentamos llenar esta capacidad con múltiples archivos más pequeños.
+
+# Crear archivos de 50 KB hasta ocupar el total, dejando algo de espacio para ver si podemos crear otro archivo.
+CREATE archivo1.txt 51200
+CREATE archivo2.txt 51200
+CREATE archivo3.txt 51200
+CREATE archivo4.txt 51200
+CREATE archivo5.txt 51200
+CREATE archivo6.txt 51200
+CREATE archivo7.txt 51200
+CREATE archivo8.txt 51200
+CREATE archivo9.txt 51200
+CREATE archivo10.txt 51200
+
+# Ahora hemos usado 512000 bytes (casi el límite total de bloques).
+
+# Intentar crear un archivo adicional debería fallar debido a falta de espacio en bloques.
+CREATE archivo_extra.txt 512 

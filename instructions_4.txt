@@ -1,0 +1,14 @@
+# Crear un archivo pequeño y escribir más datos de su tamaño para verificar el manejo de límites.
+CREATE archivo_exceso.txt 200
+WRITE archivo_exceso.txt 0 "Este texto es muy muy largo y debería recortar al final porque excede los 200 bytes permitidos en el archivo."
+READ archivo_exceso.txt 0 200
+
+# Crear un archivo de tamaño 100 bytes y leer desde un offset que esté fuera del límite.
+CREATE archivo_lectura.txt 100
+WRITE archivo_lectura.txt 0 "Texto dentro del archivo."
+READ archivo_lectura.txt 50 100
+
+# Esto debería generar un error, ya que el archivo "archivo_inexistente.txt" no ha sido creado.
+WRITE archivo_inexistente.txt 0 "Este archivo no existe, debería arrojar un error."
+READ archivo_inexistente.txt 0 50
+DELETE archivo_inexistente.txt

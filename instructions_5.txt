@@ -1,0 +1,11 @@
+# Eliminar archivos y luego volver a crear para probar liberación de bloques y reutilización.
+
+CREATE archivo0.txt 512
+CREATE archivo1.txt 512
+CREATE archivo2.txt 512
+LIST
+DELETE archivo0.txt
+DELETE archivo1.txt
+DELETE archivo2.txt
+# Esto debería ocupar los bloques liberados por los archivos anteriores.
+CREATE archivo_reutilizado.txt 1536
