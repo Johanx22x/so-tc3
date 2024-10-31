@@ -1,0 +1,7 @@
+# Prueba con múltiples archivos y operaciones variadas
+
+LIST
+
+DELETE archivo4.txt
+
+LIST

@@ -1,6 +1,6 @@
 # Prueba con múltiples archivos y operaciones variadas
 
-CREATE archivo1.txt 500
+CREATE archivo1.txt 550
 CREATE archivo2.txt 2000
 CREATE archivo3.txt 1500
 
@@ -9,8 +9,8 @@ WRITE archivo2.txt 100 "Segundo archivo de prueba en una posición distinta."
 WRITE archivo3.txt 0 "Este es el tercer archivo."
 
 READ archivo1.txt 0 25
-READ archivo2.txt 50 30
-READ archivo3.txt 0 18
+READ archivo2.txt 100 30
+READ archivo3.txt 0 50
 
 LIST
 
